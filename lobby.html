@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeevan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    .slideshow-container {
+        position: absolute;
+        top: 250px;
+        right: 200px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    
+    .mySlides {
+        display: none;
+    }
+
+    .slides {
+        width: 300px;
+        height:300px;
+    }
+    .logo{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    height: 50px;
+    width: 350px;
+    }
+    .head1{
+        height: 10px;
+        width: 600px;
+        position: absolute;
+        top: 220px;
+        left: 80px;
+        font-size: 60px;
+    }
+    .roomidd{
+        position: absolute;
+        top: 400px;
+        left: 88px;
+        text-align:left;
+        height: 30px;
+        width: 150px;
+    }
+    .nameidd{
+        position: absolute;
+        top: 360px;
+        left: 88px;
+        text-align:left;
+        height: 30px;
+        width: 150px;
+    }
+    .buttonmy{
+    position: absolute;
+    top: 400px;
+    left: 275px;
+    height: 35px;
+    width: 125px;
+    background-color:rgba(207, 168, 248, 0.877);
+    cursor: pointer;
+    }
+    .buttonmy:hover{
+ /* Reduced glow effect */
+        box-shadow: 0 4px 8px 0 rgba(148, 47, 255, 0.877), 0 17px 50px 0 rgba(148, 47, 255, 0.877);
+    }
+    .tutorial{
+        position: absolute;
+        top: 500px;
+        left: 100px;
+    }
+    .icon1{
+        
+        position: absolute;
+        top: 20px;
+        right: 100px;
+
+    }
+    .icon2{
+        
+        position: absolute;
+        top: 20px;
+        right: 50px;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="logo"><img src="photo_2024-04-06 00.27.57.png" height="100%" width="100%"alt=""></div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img class="slides" src="./images/configuration.png" alt="Image 1" height="100%" width="100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img class="slides" src="./images/programming.png" alt="Image 2"height="100%" width="100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img class="slides" src="./images/internet.png" alt="Image 3"height="100%" width="100%">
+        </div>
+    </div>
+    
+    <div class="head1">Video calls and meeting <br>&nbsp;&nbsp;&nbsp; for everyone</div>
+    <div class="icon1"><i class="fa-solid fa-gear"></i></div>
+    <div class="icon2"><i class="fa-solid fa-user"></i></div>
+    <main id="room__lobby__container">
+        
+        <div id="form__container">
+             <div id="form__container__header">
+                 <p></p>
+             </div>
+
+             <form id="lobby__form">
+ 
+                <div class="form__field__wrapper">
+                    <label></label>
+                    <input class="nameidd" type="text" name="name" required placeholder="Enter your name" />
+                </div>
+
+                <div class="form__field__wrapper">
+                   
+                    <input type="text" class="roomidd" name="room"  placeholder="Enter room code" />
+                </div>
+
+                <div class="form__field__wrapper">
+                    <button class="buttonmy" type="submit">Join Meeting
+                        
+                   </button>
+                </div>
+                <div class="tutorial">Click to watch the tutorial <a href="#">Watch Tutorial</a></div>
+           </form>
+       </div>
+    </main>
+   
+ 
+
+</body>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+    </script>
+    <script type="text/javascript" src="js/lobby.js"></script>
+</html>
