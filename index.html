@@ -284,7 +284,7 @@ input:valid ~ label {
     <div class="navbar">
 
        
-        <img class="sanjeevan" src="photo_2024-04-06 00.27.57.jpeg" alt="" height="100%" width="100%">
+        <img class="sanjeevan" src="./assets/logo.jpeg" alt="" height="100%" width="100%">
        
         <div id="mainDiv" onclick="toggleHiddenDiv()">
             Sign-in
@@ -298,7 +298,7 @@ input:valid ~ label {
 
    <div class="get-started" onclick="toggleHiddenDiv()">Get-Started</div>
 
-   <img class="image" src="loginphoto.png" alt="" height="100%" width="100%">
+   <img class="image" src="./assets/loginphoto.png" alt="" height="100%" width="100%">
     
 
 
@@ -308,7 +308,7 @@ input:valid ~ label {
     <section>
       <div class="form-box">
         <div class="form-value">
-          <form id="myForm" action="lobby.html" method="POST">
+          <form id="myForm" action="./src/lobby.html" method="POST">
             <h2>Sign-up</h2>
             <div class="inputbox">
               <ion-icon name="name-outline"></ion-icon>
@@ -344,9 +344,7 @@ input:valid ~ label {
     </section>
    
     </div>
-    
-    
-    
+      
 </body>
     
 <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -355,21 +353,16 @@ input:valid ~ label {
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
   import {getAuth, GoogleAuthProvider , signInWithPopup} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
   const firebaseConfig = {
-    apiKey: "#",
-    authDomain: "sanjeevan-419507.firebaseapp.com",
-    projectId: "sanjeevan-419507",
-    storageBucket: "sanjeevan-419507.appspot.com",
-    messagingSenderId: "750063415995",
-    appId: "1:#",
-    measurementId: "G-NY6WWM6SJ0"
-  };
-
+  apiKey: "AIzaSyBGGWDJhLeqposZnsxh7xgGJtUolrbQSuI",
+  authDomain: "hackfest-33.firebaseapp.com",
+  projectId: "hackfest-33",
+  storageBucket: "hackfest-33.appspot.com",
+  messagingSenderId: "963339281437",
+  appId: "1:963339281437:web:6b6919df4412b60d4052f4",
+  measurementId: "G-D71WJ277VW"
+};
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
@@ -385,7 +378,7 @@ input:valid ~ label {
         const token = credential.accessToken;
         const user = result.user;
         console.log(user);
-        window.location.href = "lobby.html";
+        window.location.href = "./src/lobby.html";
       }).catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -414,7 +407,7 @@ function hideHiddenDiv() {
 
 document.getElementById("myForm").addEventListener("submit", function() {
  // Prevents the default action of the button click event
-  window.location = "lobby.html";
+  window.location = "./src/lobby.html";
 });
 </script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
